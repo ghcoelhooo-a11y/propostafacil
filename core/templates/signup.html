@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="signup-page">
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="{% static 'core/img/logo_vertical_light.svg' %}" alt="Logo PropostaFácil">
+    </div>
+
+    <!-- Caixa do formulário -->
+    <div class="signup-container">
+      <h2>Criar Conta</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <p>
+          <input type="submit" value="Cadastrar">
+        </p>
+      </form>
+      <p class="redirect">
+        Já tem conta? <a href="{% url 'login' %}">Entrar</a>
+      </p>
+    </div>
+  </div>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0f4f9, #d9e4f5);
+      font-family: "Segoe UI", Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .signup-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-container img {
+      height: 100px;
+      width: auto;
+    }
+
+    .signup-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      width: 400px;
+      text-align: center;
+    }
+
+    .signup-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form p {
+      margin-bottom: 18px;
+      text-align: left;
+    }
+
+    form label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #333;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      transition: 0.3s;
+      box-sizing: border-box;
+    }
+
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form input[type="password"]:focus {
+      border-color: #007bff;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    form input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background: #28a745;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    form input[type="submit"]:hover {
+      background: #218838;
+      transform: scale(1.02);
+    }
+
+    .redirect {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .redirect a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .redirect a:hover {
+      text-decoration: underline;
+    }
+  </style>
+{% endblock %}

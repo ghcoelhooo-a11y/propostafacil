@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Clientes · PropostaFácil{% endblock %}
+{% block content %}
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h2 class="mb-0">Clientes</h2>
+    <a class="btn btn-primary btn-sm" href="#">+ Novo cliente</a>
+  </div>
+
+  {% if clientes %}
+    <div class="card shadow-sm">
+      <div class="table-responsive">
+        <table class="table table-hover mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Telefone</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for c in clientes %}
+              <tr>
+                <td>{{ c.nome }}</td>
+                <td>{{ c.email }}</td>
+                <td>{{ c.telefone }}</td>
+                <td class="text-end">
+                  <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  {% else %}
+    <div class="alert alert-info">Nenhum cliente por enquanto.</div>
+  {% endif %}
+{% endblock %}

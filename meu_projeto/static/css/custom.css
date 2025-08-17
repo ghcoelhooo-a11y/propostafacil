@@ -1,0 +1,79 @@
+/* === custom.css === */
+
+/* Cores principais */
+:root {
+  --pf-bg: #f8f9fa;
+  --pf-text: #212529;
+  --pf-accent: #0d6efd; /* azul padrão bootstrap */
+  --pf-accent-dark: #0a58ca;
+}
+
+/* Ajusta o body */
+body {
+  background-color: var(--pf-bg);
+  color: var(--pf-text);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #0f172a !important; /* azul escuro */
+}
+.navbar .navbar-brand {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.navbar .nav-link {
+  color: #e2e8f0 !important;
+}
+.navbar .nav-link:hover {
+  color: var(--pf-accent) !important;
+}
+
+/* Botões */
+.btn {
+  border-radius: 10px;
+  font-weight: 500;
+  transition: 0.2s;
+}
+.btn-primary {
+  background-color: var(--pf-accent);
+  border-color: var(--pf-accent);
+}
+.btn-primary:hover {
+  background-color: var(--pf-accent-dark);
+  border-color: var(--pf-accent-dark);
+}
+
+/* Cards */
+.card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.card-title {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Tabelas */
+.table thead {
+  background-color: #f1f5f9;
+  color: #374151;
+}
+.table-hover tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 8px;
+}

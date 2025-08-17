@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · PropostaFácil{% endblock %}
+{% block content %}
+  <div class="row">
+    <div class="col-12 col-lg-8">
+      <h1 class="display-6 fw-semibold">Bem-vindo, {{ user.get_short_name|default:user.username }}!</h1>
+      <p class="text-muted">Use o menu para navegar. Próximo passo: implementar o formulário de novo cliente.</p>
+
+      <div class="row g-3 mt-2">
+        <div class="col-sm-6 col-lg-3">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h6 class="card-title mb-1">Propostas</h6>
+              <div class="fs-4 fw-bold">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h6 class="card-title mb-1">Contratos</h6>
+              <div class="fs-4 fw-bold">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h6 class="card-title mb-1">Clientes</h6>
+              <div class="fs-4 fw-bold">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h6 class="card-title mb-1">Ativos</h6>
+              <div class="fs-4 fw-bold">0</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

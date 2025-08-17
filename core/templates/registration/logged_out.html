@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="logout-page">
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="{% static 'core/img/logo_vertical_light.svg' %}" alt="Logo PropostaFácil">
+    </div>
+
+    <!-- Caixa de mensagem -->
+    <div class="logout-container">
+      <h2>Você saiu da sua conta</h2>
+      <p>Obrigado por usar o PropostaFácil!</p>
+      <a href="{% url 'login' %}" class="btn-login">Voltar para o login</a>
+    </div>
+  </div>
+
+  <style>
+    body {
+      background: linear-gradient(135deg, #f0f4f9, #d9e4f5);
+      font-family: "Segoe UI", Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .logout-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo-container img {
+      height: 100px;
+      width: auto;
+    }
+
+    .logout-container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      width: 350px;
+      text-align: center;
+    }
+
+    .logout-container h2 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .logout-container p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .btn-login {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-login:hover {
+      background: #0056b3;
+      transform: scale(1.02);
+    }
+  </style>
+{% endblock %}
